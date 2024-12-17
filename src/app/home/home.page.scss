@@ -1,0 +1,105 @@
+/* Imagen de fondo que cubre toda la pantalla */
+.page-background {
+  background-image: url('/assets/image/cosa1.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+}
+
+ion-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+  background-color: transparent; /* Asegura que el fondo sea transparente */
+  overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0); /* Fondo blanco con 40% de opacidad */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 150px; /* Ajusta según lo necesites */
+  min-height: 350px; /* Establece una altura mínima para evitar que el contenedor sea demasiado pequeño */
+}
+
+
+
+/* form wrapper */
+.form-wrapper {
+  display: flex;              /* flexbox para centrar los botones */
+  flex-direction: column;     /* Dirección vertical de los botones */
+  justify-content: center;    /* botones horizontalmente */
+  align-items: center;        /* botones verticalmente */
+  gap: 20px;                  /* Espacio entre los botones */
+  height: 25vh;              /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+}
+
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 2em;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.firma {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #adadad;
+}

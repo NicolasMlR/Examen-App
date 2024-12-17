@@ -1,0 +1,40 @@
+<ion-content>
+    <!-- Campo para seleccionar si es Alumno o Profesor -->
+    <div class="page-background"></div>
+
+
+  <div class="container">
+    <div class="form_area">
+        <p class="title">Registrate</p>
+        <form action="">
+            <div class="form_group">
+                <label class="sub_title" for="name">Nombre Usuario</label>
+                <input placeholder="Ingresa tu Nombre" [(ngModel)]= "username" name="username" class="form_style" type="text">
+            </div>
+            <div class="form_group">
+                <label class="sub_title" for="password">Contraseña</label>
+                <input placeholder="Ingresa tu Contraseña" id="password"[(ngModel)]="password" name="password" class="form_style" type="password">
+            </div>
+            <div class="form_group">
+                <label class="sub_title" for="confirmPassword">Confirma Contraseña</label>
+                <input placeholder="Confirma tu Contraseña" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" class="form_style" type="password">
+            </div>
+            <div class="form_group">
+            <ion-item>
+              <ion-label class="sub_title">Tipo de Usuario</ion-label>
+              <ion-select [(ngModel)]="userType" name="userType" required>
+                <ion-select-option value="alumno">Alumno</ion-select-option>
+                <ion-select-option value="profesor">Profesor</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </div>
+            <div>
+                <button class="btn" (click)="registrarUsuario()">Registrarse</button>
+            </div>
+            <div>
+              <button class="btn" (click)="volverA()">Regresar</button>
+            </div>
+        </form>
+      </div>
+    </div>
+</ion-content>

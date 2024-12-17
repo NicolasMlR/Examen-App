@@ -1,0 +1,35 @@
+<ion-content>
+  <div class="page-background"></div> <!-- Fondo del dashboard -->
+
+  <ion-card (click)="verClase()">
+    <ion-card-header>
+      <ion-card-title>Clases</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Inglés</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Mostrar las clases solo si la variable mostrarClase es true -->
+  <div *ngIf="mostrarClase">
+    <ion-card *ngIf="asistenciaAlumno">
+      <ion-card-header>
+        <ion-card-title>{{ asistenciaAlumno.alumnoNombre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Iterar sobre las clases del alumno -->
+        <div *ngFor="let clase of asistenciaAlumno.clases; let i = index">
+          <p><strong>{{ clase.fecha }}</strong> - Día {{ i + 1 }}: 
+            <span *ngIf="clase.asistio === null">Pendiente</span>
+            <span *ngIf="clase.asistio !== null">{{ clase.asistio ? 'Asistió' : 'No Asistió' }}</span>
+          </p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>  
+
+  <ion-footer>
+    <ion-button expand="full" class="regresar" (click)="regresar()">Desconectarse</ion-button>
+  </ion-footer>
+
+</ion-content>

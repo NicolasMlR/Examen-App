@@ -1,0 +1,40 @@
+<ion-content>
+  <!-- Mostrar Clases -->
+  <div *ngIf="!mostrarClase">
+    <ion-card (click)="verClase()">
+      <ion-card-header>
+        <ion-card-title>Clase de Inglés</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <!-- Mostrar Alumnos si se ha seleccionado la clase -->
+  <div *ngIf="mostrarClase">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Lista de Estudiantes</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item *ngFor="let alumno of alumnos" (click)="seleccionarAlumno(alumno.id)">
+          <ion-label>{{ alumno.usuario }}</ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Mostrar Asistencia del Alumno Seleccionado -->
+  <div *ngIf="alumnoSeleccionado">
+    <h2>Asistencia de: {{ nombreAlumnoSeleccionado }}</h2>
+    <ion-list>
+      <ion-item *ngFor="let dia of asistencia; let i = index">
+        <ion-label>{{ dia.fecha }}</ion-label>
+        <ion-toggle [(ngModel)]="dia.asistio" (ionChange)="modificarAsistencia(i, dia.asistio)"></ion-toggle>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="guardarAsistencia()">Guardar Asistencia</ion-button>
+  </div>
+
+  <ion-footer>
+    <ion-button expand="full" class="regresar" (click)="regresar()">Desconectarse</ion-button>
+  </ion-footer>
+</ion-content>

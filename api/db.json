@@ -1,0 +1,86 @@
+{
+  "alumnos": [
+    {
+      "id": "1",
+      "usuario": "Damian",
+      "contrasena": "DamianAdmin"
+    },
+    {
+      "id": "2",
+      "usuario": "Juan",
+      "contrasena": "1234"
+    },
+    {
+      "id": "25b8",
+      "usuario": "test",
+      "contrasena": "test"
+    },
+    {
+      "id": "c5f9",
+      "usuario": "Damian",
+      "contrasena": "123"
+    },
+    {
+      "id": "0d60",
+      "usuario": "123",
+      "contrasena": "123"
+    },
+    {
+      "id": "bf24",
+      "usuario": "test123",
+      "contrasena": "test123"
+    },
+    {
+      "id": "e202",
+      "usuario": "Cosa",
+      "contrasena": "1234"
+    },
+    {
+      "id": "32ab",
+      "usuario": "12345",
+      "contrasena": "12345"
+    },
+    {
+      "id": "9e82",
+      "usuario": "nico",
+      "contrasena": "colocolo1"
+    },
+    {
+      "id": "10e7",
+      "usuario": "juansoto",
+      "contrasena": "juansoto123"
+    },
+    {
+      "id": "2858",
+      "usuario": "miguel",
+      "contrasena": "miguel123"
+    }
+  ],
+  "profesores": [
+    {
+      "id": "1",
+      "usuario": "Marcos",
+      "contrasena": "MarcosAdmin"
+    },
+    {
+      "id": "2",
+      "usuario": "Carlos",
+      "contrasena": "abcd"
+    },
+    {
+      "id": "08f0",
+      "usuario": "test",
+      "contrasena": "test"
+    },
+    {
+      "id": "88b0",
+      "usuario": "panxo",
+      "contrasena": "panxo123"
+    },
+    {
+      "id": "0ae0",
+      "usuario": "demian",
+      "contrasena": "demian1"
+    }
+  ]
+}

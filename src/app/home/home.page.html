@@ -1,0 +1,48 @@
+<ion-content>
+  <!-- Imagen de fondo -->
+  <div class="page-background"></div>
+
+  <!-- Contenedor del contenido -->
+  <div class="container">
+    <div class="form-wrapper">
+      <img src="assets/image/icon2.png" alt="Duoc Logo" class="logo">
+      <button class="button" (click)="voyB()">
+        <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">&nbsp;Identificarse&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;Identificarse&nbsp;</span>
+      </button>
+      <button class="button" (click)="registrarse()">
+        <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">&nbsp;Registrarse&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;Registrarse&nbsp;</span>
+      </button>
+      <button class="button" (click)="generateQRCode()">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">&nbsp;VIP&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;VIP&nbsp;</span>
+      </button>
+      
+      <canvas id="qrCanvas" width="25" height="25"></canvas>
+      <button class="button" (click)="errorSimulado()">
+        <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">&nbsp;DuocUC&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;DuocUC&nbsp;</span>
+      </button>
+      <div class="firma">
+        <p>Desarrollado por <strong>Nicolas y Francisco</strong></p>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>
